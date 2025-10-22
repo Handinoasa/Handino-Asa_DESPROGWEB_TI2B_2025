@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styleSlideShow.css">
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        // Variabel global untuk melacak gambar yang sedang ditampilkan
+        var i = 0;
+
+        // Fungsi yang dijalankan setelah dokumen siap (halaman selesai dimuat)
+        $(document).ready(function() {
+            // 1. Sembunyikan semua elemen title dan gambar di awal
+            $('.slidertitle, #slider img').hide();
+
+            // 2. Jalankan fungsi showNextImage() untuk menampilkan gambar pertama
+            showNextImage();
+
+            // 3. Atur interval untuk menjalankan showNextImage() setiap 3000 milidetik (3 detik)
+            setInterval('showNextImage()', 3000);
+        });
+
+        // Fungsi untuk menampilkan gambar dan judul berikutnya
+        function showNextImage() {
+            i++; // Naikkan counter
+
+            // Logika untuk menampilkan gambar dan judul saat ini
+            $('#sliderImage' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+            $('#title' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+
+            // Jika sudah mencapai gambar ke-3, reset counter ke 0
+            if (i == 3) {
+                i = 0;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="slider">
+
+        <img id="sliderImage1" src="img/gambar1.jpg" />
+        <div class="slidertitle" id="title1">Gambar1</div>
+
+        <img id="sliderImage2" src="img/gambar2.jpg" />
+        <div class="slidertitle" id="title2">Gambar2</div>
+
+        <img id="sliderImage3" src="img/gambar3.jpg" />
+        <div class="slidertitle" id="title3">Gambar3</div>
+
+    </div>
+</body>
+</html>

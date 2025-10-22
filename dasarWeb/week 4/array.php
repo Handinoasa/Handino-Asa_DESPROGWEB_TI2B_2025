@@ -12,10 +12,11 @@ foreach ($nilaiSiswa as $nilai) {
 echo "Daftar nilai siswa yang lulus: " . implode(', ', $nilaiLulus) . "<br><br>";
 
 $karyawan = [
-    ['nama' => 'Alice', 'pengalaman' => 5],
-    ['nama' => 'Bob', 'pengalaman' => 2],
-    ['nama' => 'Charlie', 'pengalaman' => 8],
-    ['nama' => 'Diana', 'pengalaman' => 1],
+    ['nama' => 'Alice', 'pengalaman' => 7],
+    ['nama' => 'Bob', 'pengalaman' => 3],
+    ['nama' => 'Charlie', 'pengalaman' => 9],
+    ['nama' => 'David', 'pengalaman' => 5],
+     ['nama' => 'Eva', 'pengalaman' => 6],
 ];
 
 $karyawanPengalamanLimaTahun = [];
@@ -36,8 +37,8 @@ $daftarNilai = [
     ],
     'Fisika' => [
         ['Alice', 90],
-        ['Bob', 80],
-        ['Charlie', 85],
+        ['Bob', 88],
+        ['Charlie', 75],
     ],
     'Kimia' => [
         ['Alice', 87],
